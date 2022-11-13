@@ -44,7 +44,14 @@ showWeather = (data) => {
             minute:'2-digit'
         })
             
-
+        sectionWeather.innerHTML = `
+            <h2>${name},  ${country}</h2>
+            <a href="https://www.google.com/maps/search/?api=1&query=${lat},${lon}" target="__BLANK">click to view map</a>
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png">
+            <p style="text-transform: capitalize;">${ description}</p><br>
+            <p>Current: ${temp} ° F</p>
+            <p>Feels like: ${feels_like} F</p><br>
+            <p>Last updated: ${currentTime}</p>`;
         }
     }    
 }
